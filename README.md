@@ -241,7 +241,7 @@ We can see that in production mode, the execution time of compilation is longer 
 
 ### Exercise 10
 
-The page shows in red the following message: `JS has not been loaded`. Trying to fetch data does not work.
+The page does not load the content of the bundle.
 As stated [here](https://www.lambdatest.com/web-technologies/es6-module-ie), ES6 modules are not supported in Internet Explorer.
 
 ### Exercise 11
@@ -249,3 +249,11 @@ As stated [here](https://www.lambdatest.com/web-technologies/es6-module-ie), ES6
 It isn't good enough to ensure compatibility with IE because it's an outdated browser, and IE does not supported by ES6 modules. Also, Babel can't polyfill modern API like `fetch` or `Promise` in IE.
 
 ### Exercise 12
+
+Files updated at `Front/src/index.js` and `Front/webpack.config.js`.
+
+### Exercise 13
+
+Here are two common issues that arise from transpiling code and adding polyfills, along with suggested mitigations for each:
+- Transpiling modern JavaScript to older syntax increase the size of your bundled JavaScript files. Potential mitigation is to use targeted polyfills.
+- When adding polyfills for older browsers like IE11, there’s a risk of polyfilling features that are already supported by modern browsers. This leads to slow performance. Potential mitigation is to use a conditional polyfill loading strategy.
