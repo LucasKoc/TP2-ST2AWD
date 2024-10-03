@@ -1,13 +1,34 @@
 // Webpack without "babel"
 const path = require('path')
 
-module.exports = (env, argv) => {
-  return {
-    entry: './src/index.js',
-    mode: argv.mode === 'production' ? 'production' : 'development',
-    output: {
-      path: path.resolve(__dirname, 'dist'),
-      filename: 'index.js'
-    }
-  }
-}
+module.exports = {
+  entry: './src/index.js',
+  mode: 'development',
+  targets: ['web', 'es5'],
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'index.js',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              [
+                '@babel/preset-env',
+                {
+                  targets: 'ie >= 11',
+                  presets: ['@babel/preset-env']
+                },
+              ],
+            ],
+          },
+        },
+      },
+    ],
+  },
+};

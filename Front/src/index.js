@@ -1,8 +1,8 @@
 import { apiGetRateHistory } from './api.js'
 import { renderRates } from './table.js'
-// import 'regenerator-runtime/runtime' //for babel and tranpiling
-// import 'core-js'; //for babel and tranpiling
-// import 'whatwg-fetch'; //for babel and tranpiling
+import 'regenerator-runtime/runtime' //for babel and tranpiling
+import 'core-js'; //for babel and tranpiling
+import 'whatwg-fetch'; //for babel and tranpiling
 
 const feedbackParagraph = document.getElementById('js-init-feedback')
 const tickerSelect = document.getElementById('js-select-ticker')

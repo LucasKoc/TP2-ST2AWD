@@ -241,3 +241,11 @@ We can see that in production mode, the execution time of compilation is longer 
 
 ### Exercise 10
 
+The page shows in red the following message: `JS has not been loaded`. Trying to fetch data does not work.
+As stated [here](https://www.lambdatest.com/web-technologies/es6-module-ie), ES6 modules are not supported in Internet Explorer.
+
+### Exercise 11
+
+It isn't good enough to ensure compatibility with IE because it's an outdated browser, and IE does not supported by ES6 modules. Also, Babel can't polyfill modern API like `fetch` or `Promise` in IE.
+
+### Exercise 12
