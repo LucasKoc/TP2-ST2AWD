@@ -134,7 +134,7 @@ Here's the project structure:
 │   │   ├── index.js
 │   │   └── table.js
 │   └── webpack.config.js
-├── Notes.md
+├── README.md
 └── TP2.pdf
 ```
 
